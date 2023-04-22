@@ -1,0 +1,8 @@
+# you should new global.yaml for example
+
+
+# minimax config
+# doc: https://api.minimax.chat/account/api-keys
+group_id: "xxxxxxx"
+secret: "xxxxxxx"
+host: "xxxxxxx"
