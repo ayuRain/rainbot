@@ -1,3 +1,11 @@
+
+## Build & Run 
+
+```shell
+sh build.sh 
+./output/bin/rainbot
+```
+## Code Structure
 ```
 .
 ├── biz //核心业务逻辑
