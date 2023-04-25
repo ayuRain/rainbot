@@ -6,15 +6,22 @@ import (
 	"os"
 )
 
-var BaseConfig global
+var MiniMaxConfig miniMax
+var LarkBotConfig larkBot
 
 func InstallBaseConfig() {
-	dataBytes, err := os.ReadFile(fmt.Sprintf("./conf/%s.yaml", defaultConfigName))
+	miniMaxBytes, err := os.ReadFile(fmt.Sprintf("./conf/%s.yaml", miniMaxConfigName))
 	if err != nil {
 		panic(err)
 	}
-	BaseConfig = global{}
-	err = yaml.Unmarshal(dataBytes, &BaseConfig)
+	larkBotBytes, err := os.ReadFile(fmt.Sprintf("./conf/%s.yaml", larkbotConfigName))
+	MiniMaxConfig = miniMax{}
+	LarkBotConfig = larkBot{}
+	err = yaml.Unmarshal(miniMaxBytes, &MiniMaxConfig)
+	if err != nil {
+		panic(err)
+	}
+	err = yaml.Unmarshal(larkBotBytes, &LarkBotConfig)
 	if err != nil {
 		panic(err)
 	}
