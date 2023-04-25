@@ -12,5 +12,6 @@ func customizedRegister(r *server.Hertz) {
 	r.GET("/ping", handler.Ping)
 	r.POST("/send", handler.SendMsgToChat)
 	r.POST("", handler.Verify)
+	r.POST("", handler.Ping)
 	// your code ...
 }
